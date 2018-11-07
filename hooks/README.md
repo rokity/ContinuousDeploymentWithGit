@@ -18,3 +18,7 @@ If you use git server it's the same but the foler it's different and you don't n
     ```bash
     chown git post-receive
     ```
+5. Personalize the script that run when the push event in this branch is triggered.
+    Change the script *sh ./update_master_gitlab.sh* to what you want to do.
+    I prefer to run bash script , because it's more secure.
+    
