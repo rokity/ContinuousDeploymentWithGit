@@ -1,0 +1,12 @@
+#!/bin/bash
+MASTER="master"
+
+while read oldrev newrev ref
+do
+  branch_received=`echo $ref | cut -d/ -f3`
+  echo "**** Received [$branch_received] branch."
+  if [ $branch_received = $MASTER ]; then
+      sh ./update_master_gitlab.sh
+  fi
+done
+echo "**** Done."
